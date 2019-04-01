@@ -1,0 +1,61 @@
+{
+  "manifestVersion": 1,
+  "id": "VisualStudioInstallerPatcher",
+  "version": "1.0.0",
+  "name": "Visual Studio Installer Patcher",
+  "description": "Patches version information for Visual Studio Installer projects (vdproj).",
+  "publisher": "RedAppleGroup",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rasjon/Patches-Visual-Studio-Installer-vdproj-version-information.git"
+  },
+  "links": {
+    "support": "https://github.com/rasjon/Patches-Visual-Studio-Installer-vdproj-version-information.git"
+  },
+  "screenshots": [],
+  "content": {
+    "details": {
+      "path": "README.md"
+    }
+  },
+  "tags": [
+    "Release Management",
+    "Azure DevOps Pipelines",
+    "Visual Studio Installer",
+    "Update",
+    "Patch",
+    "vdporj",
+    "VSTS",
+    "TopShelf",
+    "Visual Studio Team Services"
+  ],
+  "license": "MIT",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "icons": {
+    "default": "Images\\icon.png"
+  },
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "contributions": [
+    {
+      "id": "VisualStudioInstallerPatcher",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "VisualStudioInstallerPatcher"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "VisualStudioInstallerPatcher"
+    }
+  ]
+}
