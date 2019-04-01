@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "VisualStudioInstallerPatcher",
-  "version": "1.0.4",
+  "version": "1.2.0",
   "name": "Visual Studio Installer Patcher",
   "description": "Patches version information for Visual Studio Installer projects (vdproj).",
   "publisher": "RedAppleGroup",
@@ -24,9 +24,8 @@
     "Visual Studio Installer",
     "Update",
     "Patch",
-    "vdporj",
+    "vdproj",
     "VSTS",
-    "TopShelf",
     "Visual Studio Team Services"
   ],
   "license": "MIT",

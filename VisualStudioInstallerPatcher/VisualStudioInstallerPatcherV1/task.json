@@ -2,7 +2,7 @@
   "id": "1db07d41-e992-4354-b412-f07d7d50e276",
   "name": "VisualStudioInstallerPatcher",
   "friendlyName": "Visual Studio Installer Patcher",
-  "description": "Patches version information for Visual Studio Installer projects (vdproj).",
+  "description": "Patches the version for Visual Studio Installer projects (vdproj) and updates all necessary guids",
   "helpMarkDown": "",
   "category": "Utility",
   "visibility": [
@@ -12,10 +12,10 @@
   "author": "RedAppleGroup",
   "version": {
     "Major": 1,
-    "Minor": 0,
-    "Patch": 4
+    "Minor": 2,
+    "Patch": 0
   },
-  "instanceNameFormat": "Patch Visual Studio Installer (vdproj)",
+  "instanceNameFormat": "Patch Visual Studio Installer(s) (vdproj)",
   "groups": [
     {
       "name": "advanced",
@@ -28,19 +28,13 @@
       "name": "Sourcefolder",
       "label": "Source folder",
       "required": true,
-      "helpMarkDown": "Specify the project Source folder."
-    },
-    {
-      "name": "Sourcefiles",
-      "label": "Source files",
-      "required": true,
-      "helpMarkDown": "Specify the vdproj file(s). Wildcards can be used. For example, **/*.vdproj for all vdproj files in all the sub folders."
+      "helpMarkDown": "Specify the Source folder to locate vdproj files."
     },
     {
       "name": "Version",
       "label": "Version",
       "required": true,
-      "helpMarkDown": "Set the version to patch. Eg: $(Build.BuildNumber)."
+      "helpMarkDown": "Set the version to patch, must be of format '##.##.####'."
     }
   ],
   "execution": {
