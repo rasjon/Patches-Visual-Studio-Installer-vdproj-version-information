@@ -1,12 +1,16 @@
 param
-(
-    [Parameter()]
+(  
+	[Parameter()]
     [string]
-    $Version = (Get-VstsInput -Name 'Version' -Require),
+    $Sourcedirectory = (Get-VstsInput -Name 'Sourcedirectory' -Require),
 
     [Parameter()]
     [string]
-    $Sourcefiles = (Get-VstsInput -Name 'Sourcefiles' -Require)
+    $Sourcefiles = (Get-VstsInput -Name 'Sourcefiles' -Require),
+
+	[Parameter()]
+    [string]
+    $Version = (Get-VstsInput -Name 'Version' -Require)
 )
 Trace-VstsEnteringInvocation $MyInvocation
 
@@ -15,10 +19,13 @@ If ($DeploymentType -eq 'Agent')
     
 }
 $scriptBlock = {
-    $filename = $args[0]
-    Write-Output "Patching [$filename]"
+    $file = $args[0]
+    Write-Output "Patching [$filename]"	
 
 	Try{
+		$filename = Join-Path -Path $Sourcedirectory -ChildPath $file -Resolve
+
+
 		$productCodePattern     = '\"ProductCode\" = \"8\:{([\d\w-]+)}\"'
 		$packageCodePattern     = '\"PackageCode\" = \"8\:{([\d\w-]+)}\"'
 		$productVersionPattern  = '\"ProductVersion\" = \"8\:[0-9]+(\.([0-9]+)){1,3}\"'
