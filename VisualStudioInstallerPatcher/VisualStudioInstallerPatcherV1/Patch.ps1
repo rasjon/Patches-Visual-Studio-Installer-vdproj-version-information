@@ -2,7 +2,7 @@ param
 (  
 	[Parameter()]
     [string]
-    $Sourcedirectory = (Get-VstsInput -Name 'Sourcedirectory' -Require),
+    $Sourcefolder = (Get-VstsInput -Name 'Sourcefolder' -Require),
 
     [Parameter()]
     [string]
@@ -23,7 +23,7 @@ $scriptBlock = {
     Write-Output "Patching [$filename]"	
 
 	Try{
-		$filename = Join-Path -Path $Sourcedirectory -ChildPath $file -Resolve
+		$filename = Join-Path -Path $Sourcefolder -ChildPath $file -Resolve
 
 
 		$productCodePattern     = '\"ProductCode\" = \"8\:{([\d\w-]+)}\"'

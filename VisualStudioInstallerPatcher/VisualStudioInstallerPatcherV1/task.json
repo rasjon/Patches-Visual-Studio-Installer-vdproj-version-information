@@ -25,16 +25,22 @@
   ],
   "inputs": [
     {
-      "name": "Version",
-      "label": "Version",
+      "name": "Sourcefolder",
+      "label": "Source folder",
       "required": true,
-      "helpMarkDown": "Set the version to patch. Eg: $(Build.BuildNumber)."
+      "helpMarkDown": "Specify the project Source folder."
     },
     {
       "name": "Sourcefiles",
       "label": "Source files",
       "required": true,
       "helpMarkDown": "Specify the vdproj file(s). Wildcards can be used. For example, **/*.vdproj for all vdproj files in all the sub folders."
+    },
+    {
+      "name": "Version",
+      "label": "Version",
+      "required": true,
+      "helpMarkDown": "Set the version to patch. Eg: $(Build.BuildNumber)."
     }
   ],
   "execution": {
