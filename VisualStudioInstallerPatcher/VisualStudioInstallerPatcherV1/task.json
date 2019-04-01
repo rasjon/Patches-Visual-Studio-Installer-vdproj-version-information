@@ -1,5 +1,5 @@
 {
-  "id": "7dad075d-a817-45ac-baab-4c1376d2885e",
+  "id": "1db07d41-e992-4354-b412-f07d7d50e276",
   "name": "VisualStudioInstallerPatcher",
   "friendlyName": "Visual Studio Installer Patcher",
   "description": "Patches version information for Visual Studio Installer projects (vdproj).",
@@ -28,15 +28,13 @@
       "name": "Version",
       "label": "Version",
       "required": true,
-      "helpMarkDown": "Set the version to patch. Eg: $(Build.BuildNumber).",
-      "visibleRule": "DeploymentType=Agent"
+      "helpMarkDown": "Set the version to patch. Eg: $(Build.BuildNumber)."
     },
     {
       "name": "Sourcefiles",
       "label": "Source files",
       "required": true,
-      "helpMarkDown": "Specify the vdproj file(s). Wildcards can be used. For example, **/*.vdproj for all vdproj files in all the sub folders.",
-      "visibleRule": "DeploymentType=Agent"
+      "helpMarkDown": "Specify the vdproj file(s). Wildcards can be used. For example, **/*.vdproj for all vdproj files in all the sub folders."
     }
   ],
   "execution": {

@@ -1,1 +1,1 @@
-"# Patches-Visual-Studio-Installer-vdproj-version-information" 
+Utility to patch the version of the Visual Studio Installer (vdproj)
